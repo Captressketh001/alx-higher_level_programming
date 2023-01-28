@@ -15,9 +15,6 @@ Usage
     >>> say_my_name("Oluwakemi", "Omoyeni")
     My name is Oluwakemi Omoyeni
 
-::
-    >>> say_my_name("Paul", "Toluwani")
-    My name is Paul Toluwani
 
 The second parameter ``last_name`` is optional, without it, it should still output the result
 
@@ -44,3 +41,15 @@ The parameters provided must be strings, Otherwise raise a TypeError
     >>> say_my_name([4,5], "Anaya")
     Traceback(most recent call last):
     TypeError: first_name must be a string
+
+:: 
+    >>> say_my_name(None)
+    Traceback(most recent call last):
+    TypeError: first_name must be a string
+
+At least one parameters should be provided
+
+::
+    >>> say_my_name()
+    Traceback (most recent call last):
+    TypeError: say_my_name() missing 1 required positional argument: 'first_name'
