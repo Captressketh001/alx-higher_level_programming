@@ -7,7 +7,7 @@ Using ``text_indentation``
 A function that prints a text with 2 new lines after each of these characters: ., ? and :
 
 ::
-    >>> text_indentation = __import__('5-text_indentation).text_indentation
+    >>> text_indentation = __import__('5-text_indentation').text_indentation
     >>> text = "My name is Oluwakemi. I love God? Tell me if you can: love God."
     >>> text_indentation(text)
     My name is Oluwakemi.
