@@ -20,7 +20,7 @@ def say_my_name(first_name, last_name=""):
         raise TypeError("last_name must be a string")
     if (first_name is None or last_name is None):
         pass
-    if (first_name is None and last_name is None):
+    if (first_name is '' and last_name is ''):
         raise TypeError("One of the arguments needs to be provided")
 
 
