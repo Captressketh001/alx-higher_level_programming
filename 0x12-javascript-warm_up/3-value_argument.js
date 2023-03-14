@@ -1,5 +1,5 @@
 #!/usr/bin/node
-let index = process.argv[2]
+const index = process.argv[2]
 if (index === undefined) {
   console.log('No argument');
 }else {
