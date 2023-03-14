@@ -1,7 +1,7 @@
 #!/usr/bin/node
-const index = process.argv[2]
+const index = process.argv[2];
 if (index === undefined) {
   console.log('No argument');
-}else {
+} else {
   console.log(index);
 }
