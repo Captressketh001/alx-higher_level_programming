@@ -6,5 +6,5 @@ if (index === 0) {
 } else if (index === 1) {
   console.log('Argument found');
 } else {
-  console.log('Argument found');
+  console.log('Arguments found');
 }
