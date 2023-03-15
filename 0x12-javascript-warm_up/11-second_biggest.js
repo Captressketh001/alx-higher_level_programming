@@ -8,6 +8,6 @@ if (arg.length === 2) {
   console.log(0);
 } else {
   const index = arg.slice(2);
-  const value = index.sort().reverse();
+  const value = index.sort((a, b) => b - a).reverse();
   console.log(value[1]);
 }
