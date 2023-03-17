@@ -7,7 +7,7 @@ module.exports = class Square extends BSquare {
       this.print();
     } else {
       for (let i = 0; i < this.width; i++) {
-        console.log('C'.repeat(this.width));
+        console.log(c.repeat(this.height));
       }
     }
   }
