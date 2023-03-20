@@ -17,8 +17,8 @@ if __name__ == "__main__":
 
     cur = db.cursor()
     city_sql = "SELECT cities.name FROM cities\
-                 INNER JOIN states ON states.id=cities.state_id WHERE states.name = %s\
-                 ORDER BY cities.id ASC"
+        INNER JOIN states ON states.id=cities.state_id WHERE states.name = %s\
+            ORDER BY cities.id ASC"
     state_name = argv[4]
     cur.execute(city_sql, (state_name,))
     cities = cur.fetchall()
