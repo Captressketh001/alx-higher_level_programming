@@ -25,6 +25,5 @@ if __name__ == "__main__":
     cur.execute(city_sql, (state_name,))
     cities = cur.fetchall()
     print(", ".join(city[0] for city in cities))
-
     cur.close()
     db.close()
