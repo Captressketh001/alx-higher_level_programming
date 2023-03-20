@@ -7,8 +7,8 @@ from sqlalchemy.ext.declarative import declarative_base
 from sqlalchemy import Column, Integer, String
 Base = declarative_base()
 
-class State(Base):
 
+class State(Base):
     """defines a class state that links to the states table
     with class attribute id that represents a column of an auto-generated,
     unique integer, can’t be null and is a primary key
