@@ -10,10 +10,10 @@ from sqlalchemy.orm import sessionmaker
 if __name__ == "__main__":
     engine = create_engine('mysql+mysqldb://{}:{}@localhost/{}'.format(sys.argv[1], sys.argv[2], sys.argv[3]), pool_pre_ping=True)
     Session = sessionmaker(bind=engine)
-
     session = Session()
 
-    state = session.query(State)[0]
+    # query first python instance in database
+    state = session.query(State).order_by(State.id).first()
     if state:
         print("{:d}: {:s}".format(state.id, state.name))
     else:
