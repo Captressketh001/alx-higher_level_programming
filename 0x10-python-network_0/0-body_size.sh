@@ -1,13 +1,3 @@
 #!/bin/bash
-# Bash script that takes in a URL
-# sends a request to that URL
-# displays the size of the body of the response
-
-response=$(mktemp)
-curl -s -o $response "$1"
-
-size=$(wc -c < $response)
-echo $size
-
-# remove the temporary file
-rm $response
+# Bash script that takes in a
+curl -sL -I $1 | grep Content-Length: | cut -f2 -d' '
