@@ -4,7 +4,7 @@
 # displays the size of the body of the response
 
 response=$(mktemp)
-curl -s -o $response $1
+curl -s -o $response "$1"
 
 size=$(wc -c < $response)
 echo $size
