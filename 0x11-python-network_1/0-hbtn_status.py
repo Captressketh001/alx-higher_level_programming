@@ -10,7 +10,7 @@ if __name__ == "__main__":
         html = response.read()
 
     decoded_html = html.decode('utf-8')
-
+    print("Body response:")
     print("- type: {}".format(type(decoded_html)))
-    print("- content: {}".format(decoded_html))
+    print("- content: {}".format(html))
     print("- utf8 content: {}".format(decoded_html))
