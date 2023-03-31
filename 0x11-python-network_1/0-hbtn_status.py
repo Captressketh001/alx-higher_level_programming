@@ -11,6 +11,6 @@ if __name__ == "__main__":
 
     decoded_html = html.decode('utf-8')
     print("Body response:")
-    print("- type: {}".format(type(html)))
-    print("- content: {}".format(html))
-    print("- utf8 content: {}".format(decoded_html))
+    print(f"\t- type: {type(html)}")
+    print(f"\t- content: {html}")
+    print(f"\t- utf8 content: {decoded_html}")
