@@ -7,12 +7,10 @@ import requests
 from sys import argv
 
 if __name__ == '__main__':
-    url = 'https://api.github.com/repos/{owner}/{repo}/commits'
     repo = argv[1]
     owner = argv[2]
-
-    payload = {'owner': owner, 'repo': repo}
-    res = requests.get(url, params=payload)
+    url = f'https://api.github.com/repos/{owner}/{repo}/commits'
+    res = requests.get(url)
     if res.status_code == 200:
         data = res.json()[:10]
         print(data)
