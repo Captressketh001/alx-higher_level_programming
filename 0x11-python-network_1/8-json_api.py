@@ -12,7 +12,7 @@ if __name__ == '__main__':
         q = argv[1]
     else:
         q = ""
-    
+
     payload = {'q': q}
     res = requests.post(url, data=payload)
     try:
