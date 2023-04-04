@@ -13,6 +13,9 @@ if __name__ == '__main__':
     res = requests.get(url)
     if res.status_code == 200:
         data = res.json()[:10]
-        print(data)
+        for i in data:
+            sha = i['sha']
+            author = i['commit']['author']['name']
+            print("{}: {}".format(sha, author))
     else:
         print("None")
