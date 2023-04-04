@@ -7,7 +7,7 @@ import requests
 from sys import argv
 
 if __name__ == '__main__':
-    url = 'https://api.github.com/user'
+    url = 'https://api.github.com/repos/{owner}/{repo}/commits'
     repo = argv[1]
     owner = argv[2]
 
