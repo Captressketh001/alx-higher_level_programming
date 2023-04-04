@@ -8,6 +8,6 @@ if __name__ == "__main__":
     
     url = sys.argv[1]
     with urllib.request.urlopen(url) as response:
-        html = response.read()
+        url_header = response.info()
 
-    print(html)
+    print(url_header.get('X-Request-Id'))
