@@ -9,10 +9,10 @@ from sys import argv
 if __name__ == '__main__':
     url = 'https://api.github.com/user'
     username = argv[1]
-    pwd = argv[2]
+    password = argv[2]
 
-    payload = {'username': username, 'password':pwd}
-    res = requests.get(url, data=payload)
+    # payload = {'username': username, 'password': pwd}
+    res = requests.get(url, auth=(username, password))
     if res.status_code == 200:
         data = res.json()
         print(data['id'])
