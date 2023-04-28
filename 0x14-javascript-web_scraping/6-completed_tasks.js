@@ -6,13 +6,13 @@ request(url, (error, response, body) => {
   if (error) {
     console.log(error);
   } else {
-    let user = {};
-    let todos = JSON.parse(body); 
+    const user = {};
+    const todos = JSON.parse(body);
 
     todos.forEach((todo) => {
       if (todo.completed) {
         const userId = todo.userId;
-        
+
         if (user[userId]) {
           user[userId] += 1;
         } else {
@@ -22,4 +22,4 @@ request(url, (error, response, body) => {
     });
     console.log(user);
   }
-})
+});
